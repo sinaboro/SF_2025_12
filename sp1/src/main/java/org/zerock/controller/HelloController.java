@@ -5,18 +5,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.zerock.service.HelloService;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
+@RequiredArgsConstructor
 public class HelloController {
 
-	@Autowired
-	private HelloService helloService;
+	private final HelloService helloService;
 	
-	@GetMapping("/hello")
-	public String hello() {
-		log.info("----hello-----------");
-		return null;
-	}
+	
+	// @Autowired - 필드 주입
+	//private HelloService helloService;
+	
+//	public HelloController(HelloService helloService) {
+//		this.helloService = helloService;
+//	}
 }
