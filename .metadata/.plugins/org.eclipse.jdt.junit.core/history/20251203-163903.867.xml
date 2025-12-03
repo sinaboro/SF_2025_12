@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TimeMapperTests.testTime1" project="sp1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.zerock.mapper.TimeMapperTests" time="0.145" displayname="TimeMapperTests" uniqueid="[engine:junit-jupiter]/[class:org.zerock.mapper.TimeMapperTests]">
+    <testcase name="testTime1" classname="org.zerock.mapper.TimeMapperTests" time="0.145" displayname="testTime1()" uniqueid="[engine:junit-jupiter]/[class:org.zerock.mapper.TimeMapperTests]/[method:testTime1()]"/>
+  </testsuite>
+</testrun>
