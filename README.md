@@ -9,6 +9,7 @@ CREATE USER 'springdbuser'@'%' IDENTIFIED BY '1234';
 
 GRANT ALL PRIVILEGES ON springdb.* TO 'springdbuser'@'%';
 
+## table_board 테이블 생성
 '''sql
 create table table_board(
 	bno int auto_increment primary,
