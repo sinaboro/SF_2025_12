@@ -1,16 +1,17 @@
 # SF_2025_12
 
-## MySQL Database & User 설정
+## MySQL Database & User 설정 및 table_board 테이블 생성
 
 ```sql
+-- 📌 1) Database & User 설정
 CREATE DATABASE springdb;
 
 CREATE USER 'springdbuser'@'%' IDENTIFIED BY '1234';
 
 GRANT ALL PRIVILEGES ON springdb.* TO 'springdbuser'@'%';
 
-table_board 테이블 생성
 
+-- 📌 2) table_board 테이블 생성
 create table table_board(
     bno int auto_increment primary key,
     title varchar(500) not null,
