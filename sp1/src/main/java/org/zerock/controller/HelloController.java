@@ -71,6 +71,7 @@ public class HelloController {
 		log.info("name : " + name);		
 	}
 
+	//http://localhost:8080/sample/ex4 , Method:Post
 	@PostMapping("/ex4")
 	public void ex4Post(@RequestParam(name="n1", defaultValue = "1") int num,
 			@RequestParam("name") String name) {
