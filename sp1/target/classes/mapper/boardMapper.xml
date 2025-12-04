@@ -14,7 +14,7 @@
 	  values (#{title}, #{content}, #{writer})
   </insert>
   
-  <select id="selectOne" resultType="BoardDTO">
+  <select id="selectOne" resultType="org.zerock.dto.BoardDTO">
   	select * from tbl_board where bno = #{bno}
   </select>
   
