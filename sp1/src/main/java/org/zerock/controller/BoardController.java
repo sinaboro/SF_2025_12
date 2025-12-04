@@ -2,6 +2,8 @@ package org.zerock.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.RequiredArgsConstructor;
@@ -21,11 +23,36 @@ public class BoardController {
 	}
 	*/
 	
-	//localhost:8080/board/list 
+	// localhost:8080/board/list
 	// -> /WEB-INF/ views / board / list.jsp
 	@GetMapping("/list")
 	public void list() {
 		log.info("board list");
+	}
+	
+	//등록 화면
+	@GetMapping("/register")
+	public void register() {
+		log.info("board register");
+	}
+	
+	//등록 처리
+	@PostMapping("/register")
+	public String registerPost() {
+		log.info("-------------------------------");
+		log.info("board register post");
+		return "redirect:/board/list";
+	}
+	
+	//단건 조회	localhost:8080/board/read/1 
+	// db에서 1번 데이타 보여주세요
+	// -> /WEB-INF/ views / board / read.jsp
+	@GetMapping("/read/{bno}")
+	public String read(@PathVariable("bno") Long bno) {
+		
+		log.info("board read");
+		return "/board/read";
+		
 	}
 	
 }
