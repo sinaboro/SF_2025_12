@@ -2,4 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file= "/WEB-INF/views/includes/header.jsp" %>
+
+${list}
+
 <%@ include file= "/WEB-INF/views/includes/footer.jsp" %>

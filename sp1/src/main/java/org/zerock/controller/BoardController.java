@@ -1,10 +1,15 @@
 package org.zerock.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.zerock.dto.BoardDTO;
+import org.zerock.service.BoardService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -15,6 +20,9 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 public class BoardController {
 
+	//생성자 주입(DI) , @RequiredArgsConstructor 의해서
+	private final BoardService boardService;
+	
 	/*
 	//localhost:8080/board/ex1 -> /WEB-INF/ views / board / ex1.jsp
 	@GetMapping("/ex1")
@@ -26,8 +34,15 @@ public class BoardController {
 	// localhost:8080/board/list
 	// -> /WEB-INF/ views / board / list.jsp
 	@GetMapping("/list")
-	public void list() {
+	public void list(Model model) {
 		log.info("board list");
+		
+		List<BoardDTO> boardDtoList = boardService.getList();
+		
+		model.addAttribute("list", boardDtoList);
+		
+//		model.addAttribute("list", boardService.getList());
+
 	}
 	
 	//등록 화면
@@ -55,4 +70,31 @@ public class BoardController {
 		
 	}
 	
+	/*
+	 * 수정 폼
+	 * localhost:8080/board/modify/1 
+	 */
+	@GetMapping("/modify/{bno}")
+	public String modifyGet(@PathVariable("bno") Long bno) {
+		log.info("board modify get");
+		return "board/modify";
+	}
+	
+	@PostMapping("/modify/")
+	public String modifyPost() {
+		log.info("board modify post");
+		
+		return "redirect:/board/read/1";
+	}
+	
+	/*
+	 * 삭제
+	 * localhost:8080/board/remove 
+	 */
+	@PostMapping("/remove")
+	public String remove() {
+		log.info("board remove post");
+		
+		return "redirect:/board/list";
+	}
 }

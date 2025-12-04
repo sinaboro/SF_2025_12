@@ -24,7 +24,6 @@ INDEX VERSION 1.134+D:\Works\SF\.metadata\.plugins\org.eclipse.jdt.core
 1965928645.index
 3496577869.index
 2657914814.index
-3833053000.index
 1913691980.index
 2630333738.index
 570912058.index
