@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DBTests" project="sp1" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="org.zerock.db.DBTests" time="0.001" displayname="DBTests" uniqueid="[engine:junit-jupiter]/[class:org.zerock.db.DBTests]">
-    <testcase name="testConnection" classname="org.zerock.db.DBTests" time="0.001" displayname="testConnection()" uniqueid="[engine:junit-jupiter]/[class:org.zerock.db.DBTests]/[method:testConnection()]"/>
-  </testsuite>
-</testrun>
