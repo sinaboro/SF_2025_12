@@ -14,7 +14,7 @@
 	  values (#{title}, #{content}, #{writer})
   </insert>
   
-  <select id="selectOne" resultType="org.zerock.dto.BoardDTO">
+  <select id="selectOne" resultType="BoardDTO">
   	select * from tbl_board where bno = #{bno}
   </select>
   
@@ -30,7 +30,7 @@
   	where bno = #{bno}
   </update>
   
-  <select id="list" resultType="org.zerock.dto.BoardDTO">
+  <select id="list" resultType="BoardDTO">
   	select bno, title, writer, content, regDate 
   	from tbl_board
   	where delflag = false

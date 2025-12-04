@@ -30,7 +30,7 @@
   	where bno = #{bno}
   </update>
   
-  <select id="list" resultType="BoardDTO">
+  <select id="list" resultType="org.zerock.dto.BoardDTO">
   	select bno, title, writer, content, regDate 
   	from tbl_board
   	where delflag = false
