@@ -9,6 +9,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="configLocation"/>
 			<item value="ResultSet"/>
 			<item value="dataSource"/>
 			<item value="driverClassName"/>
