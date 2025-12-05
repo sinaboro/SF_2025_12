@@ -23,13 +23,58 @@ class MemberMapperTests {
 	void testInsert() {
 		MemberDTO dto = MemberDTO.builder()
 				.name("홍길동")
-				.email("test@naver.com")
+				.email("test4@naver.com")
 				.password("1234")
 				.build();
 		
 		memberMapper.insert(dto);
 		
+		//log.info("생성된 PK : " + dto.getMno());
 		
+		assertNotNull(dto.getMno());
+	}
+	
+	@Test
+	void testList() {
+		memberMapper.getList()
+		.forEach(member-> log.info(member));
+	}
+	
+	@Test
+	void testMemberById() {
+		MemberDTO dto = memberMapper.memberById(5);
+		
+		log.info(dto);
+	}
+	
+	@Test
+	void testUpdate() {
+		MemberDTO dto = MemberDTO.builder()
+				.name("박길동")
+				.password("1111")
+				.email("aaa@test.com")
+				.mno(5)
+				.build();
+		
+		memberMapper.update(dto);
+		
+		log.info(memberMapper.memberById(5));
+	} // end testUpdate
+
+	@Test
+	void testDelete() {
+		memberMapper.delete(5);
 	}
 
-}
+} //end tests;
+
+
+
+
+
+
+
+
+
+
+
