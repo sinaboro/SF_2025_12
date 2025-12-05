@@ -23,7 +23,11 @@
 						<c:forEach var="board" items="${list}">
 							<tr data-bno=${board.bno}>
 								<td><c:out value="${board.bno}" /></td>
-								<td><c:out value="${board.title}" /></td>
+								<td>
+									<a href="/board/read/${board.bno}">
+										<c:out value="${board.title}" />
+									</a>
+								</td>
 								<td><c:out value="${board.writer}" /></td>
 								<td><c:out value="${board.createdDate}" /></td>
 							</tr>
