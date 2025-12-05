@@ -31,8 +31,7 @@
       <label>Password:</label>
       <input type="password" class="form-control" 
       	name="password" value="<c:out value='${member.password}'/>">
-    </div>
-   
+    </div>   
     <button type="button" class="btn btn-primary update">수정</button>
     <button type="button" class="btn btn-danger delete">삭제</button>
     <button type="button" class="btn btn-info list">목록</button>
