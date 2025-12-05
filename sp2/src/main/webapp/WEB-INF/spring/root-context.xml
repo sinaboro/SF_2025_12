@@ -34,7 +34,7 @@
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 	</bean>
 	
-	<mybatis-spring:scan base-package="org.zerock.mapper"/>
+	<!-- <mybatis-spring:scan base-package="org.zerock.mapper"/> -->
 	
 </beans>
 
