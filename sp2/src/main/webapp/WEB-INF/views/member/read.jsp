@@ -16,7 +16,7 @@
 
 <div class="container mt-3">
   <h2>Member Read</h2>
-  <form action="/member/register" method="post">
+  <form action="/member/read" method="post" id="form">
     <div class="mb-3 mt-3">
       <label>Name:</label>
       <input type="text" class="form-control" name="name" 
@@ -33,10 +33,33 @@
       	name="password" value="<c:out value='${member.password}'/>">
     </div>
    
-    <button type="submit" class="btn btn-primary">등록</button>
-    <button type="reset" class="btn btn-info">취소</button>
+    <button type="button" class="btn btn-primary update">수정</button>
+    <button type="button" class="btn btn-danger delete">삭제</button>
+    <button type="button" class="btn btn-info list">목록</button>
   </form>
 </div>
+
+<script type="text/javascript">
+	const formObj = document.getElementById("form");
+	document.querySelector(".update").addEventListener("click", ()=>{
+		formObj.action = "/member/modify";
+		formObj.method = "post"
+		formObj.submit();
+	});
+
+	document.querySelector(".delete").addEventListener("click", ()=>{
+		formObj.action = "/member/delete";
+		formObj.method = "post"
+		formObj.submit();
+	});
+
+	document.querySelector(".list").addEventListener("click", ()=>{
+		formObj.reset();
+		formObj.action = "/member/list";
+		formObj.method = "get"
+		formObj.submit();
+	});
+</script>
 
 </body>
 </html>
