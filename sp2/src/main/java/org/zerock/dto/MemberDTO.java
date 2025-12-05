@@ -2,8 +2,10 @@ package org.zerock.dto;
 
 import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /*
  * CREATE TABLE tbl_member (
@@ -19,7 +21,7 @@ import lombok.Data;
 @Data
 @Builder
 public class MemberDTO {
-	private int nmo;
+	private int mno;
 	private String name;
 	private String email;
 	private String password;

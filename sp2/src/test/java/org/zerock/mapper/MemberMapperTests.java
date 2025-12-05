@@ -7,6 +7,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.zerock.dto.MemberDTO;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -20,6 +21,14 @@ class MemberMapperTests {
 	
 	@Test
 	void testInsert() {
+		MemberDTO dto = MemberDTO.builder()
+				.name("홍길동")
+				.email("test@naver.com")
+				.password("1234")
+				.build();
+		
+		memberMapper.insert(dto);
+		
 		
 	}
 
