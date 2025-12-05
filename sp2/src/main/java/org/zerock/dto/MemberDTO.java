@@ -21,6 +21,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class MemberDTO {
 	private int mno;
 	private String name;

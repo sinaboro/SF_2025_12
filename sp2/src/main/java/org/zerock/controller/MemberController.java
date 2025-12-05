@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.dto.MemberDTO;
 import org.zerock.service.MemberService;
 
@@ -38,8 +40,21 @@ public class MemberController {
 	}
 	
 	@PostMapping("/register")
-	public String registerPost() {
-		return null;
+	public String registerPost(MemberDTO dto) {
+		
+		service.insert(dto);
+		
+		return "redirect:/member/list";
+	}
+	
+	@GetMapping("/read/{mno}")
+	public String read(@PathVariable("mno") int mno,
+			Model model) {
+		
+		MemberDTO member = service.memberById(mno);
+		model.addAttribute("member", member);
+		
+		return "/member/read";
 	}
 	
 }
