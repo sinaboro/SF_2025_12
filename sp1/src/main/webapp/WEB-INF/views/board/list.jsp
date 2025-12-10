@@ -34,6 +34,32 @@
 						</c:forEach>
 					</tbody>
 				</table>
+				
+				<!-- 페이징 처리  -->
+				<div class="d-flex justify-content-center">
+				  <ul class="pagination ">
+				  	
+				  	<c:if test="${dto.prev}">
+					    <li class="page-item disabled">
+					      <a class="page-link" href="" tabindex="-1">Previous</a>
+					    </li>
+				    </c:if>
+				    
+				    <c:forEach var="num" items="${dto.pageNums}">
+				    	<li class="page-item">
+				    		<a class="page-link" href="${num}">${num}</a>
+				    	</li>
+				    </c:forEach>
+				    
+				    <c:if test="${dto.next}">
+					    <li class="page-item">
+					      <a class="page-link" href="#">Next</a>
+					    </li>
+				    </c:if>
+				    
+				  </ul>
+				</div>
+				<!-- end 페이징 처리  -->
 			</div>	
 		</div>
 	</div>

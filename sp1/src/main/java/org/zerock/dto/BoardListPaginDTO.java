@@ -21,6 +21,7 @@ public class BoardListPaginDTO {
 	
 	private int start, end;  //페이지 시작,  끝
 	private boolean prev, next;  //이전 , 다음 버튼
+	
 	private List<Integer> pageNums;
 	
 	public BoardListPaginDTO(List<BoardDTO> boardDTOList, int totalCount, int page, int size) {
@@ -45,7 +46,7 @@ public class BoardListPaginDTO {
 		this.prev = start != 1;
 		this.next = totalCount > (this.end * size);
 		
-		this.pageNums = IntStream.rangeClosed(size, end)
+		this.pageNums = IntStream.rangeClosed(start, end)
 					.boxed().toList();
 	}
 	
