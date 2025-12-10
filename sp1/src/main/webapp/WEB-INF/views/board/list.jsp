@@ -20,7 +20,7 @@
 						<th>RegDate</th>
 					</thead>
 					<tbody class="tbody">
-						<c:forEach var="board" items="${list}">
+						<c:forEach var="board" items="${dto.boardDTOList}">
 							<tr data-bno=${board.bno}>
 								<td><c:out value="${board.bno}" /></td>
 								<td>
