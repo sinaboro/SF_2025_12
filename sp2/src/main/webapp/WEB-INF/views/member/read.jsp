@@ -17,6 +17,7 @@
 <div class="container mt-3">
   <h2>Member Read</h2>
   <form action="/member/read" method="post" id="form">
+    <input type="hidden" name="mno" value="${member.mno}"> 
     <div class="mb-3 mt-3">
       <label>Name:</label>
       <input type="text" class="form-control" name="name" 
