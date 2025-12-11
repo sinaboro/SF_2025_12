@@ -1,5 +1,6 @@
 package org.zerock.mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -108,10 +109,26 @@ public class BoardMapperTests {
 		int skip = (page -1) * 10;
 		int count = 15;
 		
-		String[] types = new String[] {"T"};
+		String[] types = new String[] {"T","C"};
+		
+//		List<String> types = new ArrayList<String>();
+//		types.add("T");
+//		types.add("C");		
+		
 		String keyword = "test";
 		
 		boardMapper.listSearch(skip, count, types, keyword);
 	}
 	
+	@Test
+	public void testCount() {
+		
+		
+		String[] types = new String[] {"T","C"};				
+		
+		String keyword = "수정";
+		
+		int result = boardMapper.listCountSearch(types, keyword);
+		log.info("전체 갯수 : " + result);
+	}
 }

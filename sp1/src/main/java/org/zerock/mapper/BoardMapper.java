@@ -28,6 +28,12 @@ public interface BoardMapper {
 	List<BoardDTO> listSearch( @Param("skip") int skip,
 								@Param("count") int count,
 								@Param("types") String[] types,
+//								@Param("types") List<String> types,
 								@Param("keyword") String keyword
 							  );
+	
+	int listCountSearch(
+				@Param("types") String[] types,
+				@Param("keyword") String keyword
+			);
 }

@@ -50,11 +50,8 @@
   	where bno>0 and delflag = false
   </select>
   
-  <select id="listSearch" resultType="BoardDTO">
-  	select bno, title, writer, regDate 
-  	from tbl_board
-  	where delflag = false
-  	
+  
+  <sql id="search">
   	<if test = "types != null and keyword != null">
   		<foreach collection="types" item="type" open=" and (" 
   			close=")" separator="or">
@@ -69,8 +66,26 @@
   			</if>
   		</foreach>
   	</if>
+  </sql>
+  
+  <select id="listSearch" resultType="BoardDTO">
+  	select bno, title, writer, regDate 
+  	from tbl_board
+  	where delflag = false
+  	
+  	<include refid="search"></include>
+  	
   	order by bno desc
   	limit #{skip}, #{count}
+  </select>
+  
+  <select id="listCountSearch" resultType="int">
+	select count(bno) 
+  	from tbl_board
+  	where delflag = false
+  	
+  	<include refid="search"></include>
+  	
   </select>
 </mapper>
 
