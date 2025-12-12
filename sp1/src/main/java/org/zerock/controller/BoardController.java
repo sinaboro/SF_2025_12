@@ -95,6 +95,7 @@ public class BoardController {
 			Model model) {
 		
 		BoardDTO dto = boardService.read(bno);
+		
 		model.addAttribute("board", dto);
 		model.addAttribute("page", page);
 	    model.addAttribute("size", size);
