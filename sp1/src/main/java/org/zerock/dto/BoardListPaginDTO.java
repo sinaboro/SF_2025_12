@@ -8,9 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter
-@ToString
-@Getter
+@Data
 public class BoardListPaginDTO {
 
 	private List<BoardDTO> boardDTOList;  //전제 목록
