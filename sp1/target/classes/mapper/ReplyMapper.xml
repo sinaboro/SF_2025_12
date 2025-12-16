@@ -15,6 +15,17 @@
   	values(#{bno}, #{replyText}, #{replyer})
   </insert>
   
+  <select id="read" resultType="ReplyDTO">
+  	select * from tbl_reply 
+  	where rno = #{rno}
+  </select>
+  
+  <delete id="delete">
+    update tbl_reply
+    set delflag = true 
+    where rno = #{rno}
+  </delete>
+  
 </mapper>
 
 

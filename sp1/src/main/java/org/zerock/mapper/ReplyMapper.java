@@ -10,4 +10,8 @@ public interface ReplyMapper {
 	
 	int insert(ReplyDTO replyDTO);
 	
+	ReplyDTO read(@Param("rno") int rno);
+
+	int delete(@Param("rno") int rno);
+	
 }

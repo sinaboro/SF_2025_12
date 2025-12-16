@@ -52,20 +52,23 @@
   
   
   <sql id="search">
-  	<if test = "types != null and keyword != null">
-  		<foreach collection="types" item="type" open=" and (" 
-  			close=")" separator="or">
-  			<if test='type.equals("T")'>
-  				title like concat('%', #{keyword}, '%')
-  			</if>
-  			<if test='type.equals("C")'>
-  				content like concat('%', #{keyword}, '%')
-  			</if>
-  			<if test='type.equals("W")'>
-  				writer like concat('%', #{keyword}, '%')
-  			</if>
-  		</foreach>
-  	</if>
+   	  	
+   	  	<if test="types != null and types.length > 0 and keyword != null 
+   	  		and keyword != ''">
+	  		<foreach collection="types" item="type" open="and (" 
+	  			close=")" separator="or">
+	  			<if test='type.equals("T")'>
+	  				title like concat('%', #{keyword}, '%')
+	  			</if>
+	  			<if test='type.equals("C")'>
+	  				content like concat('%', #{keyword}, '%')
+	  			</if>
+	  			<if test='type.equals("W")'>
+	  				writer like concat('%', #{keyword}, '%')
+	  			</if>
+	  		</foreach>
+	  	</if> 
+	  	 	
   </sql>
   
   <select id="listSearch" resultType="BoardDTO">

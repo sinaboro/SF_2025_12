@@ -43,13 +43,12 @@ public class BoardController {
 			@RequestParam(name="types", required = false) String types,
 			@RequestParam(name="keyword", required = false) String keyword,			
 			Model model) {
-		log.info("board list");
 		
 		BoardListPaginDTO list = boardService.getList(page, size,types,keyword);
 		
-		log.info("-------------------");
-		log.info(list.getKeyword());
-		log.info(list.getTypes());
+		log.info("---------------------------------------");
+		log.info("types : " +  list.getKeyword());
+		log.info("keyword : " + list.getTypes());		
 		
 		model.addAttribute("dto", list);
 		
