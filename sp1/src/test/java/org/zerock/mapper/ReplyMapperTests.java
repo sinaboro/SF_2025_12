@@ -56,5 +56,27 @@ class ReplyMapperTests {
 		
 		replyMapper.update(replyDTO);
 	}
+	
+	@Test
+	public void testInserts() {
+		long[] bnos = {11665218L, 11665217L, 49999L };
+		
+		for(Long bno : bnos) {
+			for(int i=0; i<100; i++) {
+				ReplyDTO dto = ReplyDTO.builder()
+						.bno(bno)
+						.replyText("replyer"+ i)
+						.replyer("replyer"+i)
+						.build();
+				replyMapper.insert(dto);
+			}
+		}
+	}
+	
+	@Test
+	public void testList() {
+		replyMapper.listOfBoard(49999L, 10, 10)
+		.forEach(reply -> log.info("reply : " + reply));
+	}
 
 }

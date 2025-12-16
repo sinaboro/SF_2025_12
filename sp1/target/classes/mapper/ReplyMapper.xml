@@ -32,6 +32,13 @@
   	where rno = #{rno}
   </update>
   
+  <select id="listOfBoard" resultType="ReplyDTO">  
+  	select * from tbl_reply
+  	where bno = #{bno} and rno>0 
+  	order by rno asc
+  	limit #{limit} offset #{skip}
+  </select>
+  
 </mapper>
 
 
