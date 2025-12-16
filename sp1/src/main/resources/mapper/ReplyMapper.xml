@@ -26,6 +26,12 @@
     where rno = #{rno}
   </delete>
   
+  <update id="update">
+  	update tbl_reply
+  	set replyText = #{replyText}
+  	where rno = #{rno}
+  </update>
+  
 </mapper>
 
 

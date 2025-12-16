@@ -28,7 +28,7 @@ create table tbl_reply(
     replyText varchar(500) not null, -- 댓글 내용
     replyer varchar(50) not null,  -- 작성자
     replydate timestamp default now(),
-    updatedate timestamp default now(),
+    updatedate timestamp default now() on update now(),
     delflag boolean default false,
     bno int not  null  
 );

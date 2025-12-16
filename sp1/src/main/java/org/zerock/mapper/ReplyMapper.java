@@ -14,4 +14,6 @@ public interface ReplyMapper {
 
 	int delete(@Param("rno") int rno);
 	
+	int update(ReplyDTO replyDTO);
+	
 }

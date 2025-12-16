@@ -47,5 +47,14 @@ class ReplyMapperTests {
 		log.info("result : " + replyMapper.delete(4));
 	}
 	
+	@Test
+	public void testUpdate() {
+		ReplyDTO replyDTO = new ReplyDTO();
+		
+		replyDTO.setReplyText("댓글 내용 수정");
+		replyDTO.setRno(1);
+		
+		replyMapper.update(replyDTO);
+	}
 
 }
