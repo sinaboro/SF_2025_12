@@ -32,4 +32,16 @@ class ReplyServiceTest {
 			log.info(dto);
 	}
 
+	
+	@Test
+	void testDelete() {
+		replyService.remove(1000000);
+	}
+	
+	
+	
+	
+	
+	
+	
 }
