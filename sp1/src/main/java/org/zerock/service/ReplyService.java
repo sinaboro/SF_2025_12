@@ -1,7 +1,10 @@
 package org.zerock.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.zerock.dto.ReplyDTO;
+import org.zerock.dto.ReplyListPaginDTO;
 import org.zerock.mapper.ReplyMapper;
 import org.zerock.service.exception.ReplyException;
 
@@ -59,5 +62,37 @@ public class ReplyService {
 		}
 	}
 	
+	public ReplyListPaginDTO listOfBoard(Long bno, int page, int size) {
+		try {
+			
+			int skip = (page-1) * size;
+			
+			List<ReplyDTO> replyDTOList = replyMapper.listOfBoard(bno, skip, size);
+			int count = replyMapper.countOfBoard(bno);
+			
+			return new ReplyListPaginDTO(replyDTOList, count, page, size);
+			
+		}catch(Exception e) {
+			throw new ReplyException(500, e.getMessage());
+		}
+	}
+	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
