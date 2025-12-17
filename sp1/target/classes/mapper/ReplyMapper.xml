@@ -40,7 +40,7 @@
   </select>
   
   <select id="countOfBoard" resultType="int">
-  	select count(bno) from tbl_reply
+  	select count(rno) from tbl_reply
   	where bno = #{bno} and rno > 0
   </select>
   
