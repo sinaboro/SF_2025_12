@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.dto.ReplyDTO;
@@ -31,7 +32,7 @@ public class ReplyController {
 	}
 
 	@PostMapping("")
-	public ResponseEntity<Map<String, Integer>> add(ReplyDTO replyDTO){
+	public ResponseEntity<Map<String, Integer>> add(@RequestBody ReplyDTO replyDTO){
 		
 		log.info("---------------add-----------------");
 		log.info(replyDTO);
