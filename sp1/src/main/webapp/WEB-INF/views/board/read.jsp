@@ -93,19 +93,8 @@
 	
 	document.querySelector(".addReplyBtn").addEventListener("click", e=>{
 		e.preventDefault();
-		e.stopPropagation();
+		e.stopPropagation();		
 		
-		/*
-		  bno,  49998                         
-		  name="replyer"  ,  홍길동      ==> 
-		  name="replyText" , 댓글 등록       
-		  
-		  {
-			  bno: 49998,
-			  replyer: "홍길동",
-			  replyText: "댓글 등록"
-		  }  ==> js 객체만듬
-		*/
 		console.log("-----------addReplyBtn-----------------")
 		const formData = new FormData(replyForm);
 		
@@ -116,12 +105,20 @@
   			console.log(key, value);
 		}*/
 		  
-		axios.post("/replies", formData)
-			.then(res => {
-				console.log("------server response-------------");
-				console.log(res)
-				replyForm.reset();
-			})
+		 axios.post("/replies", formData, {
+	           headers: {
+	               'Content-Type': 'application/json' 
+	           }
+	       })
+	       .then(res => {
+	           console.log("------성공 응답-------------");
+	           console.log(res.data);
+	           replyForm.reset();
+	       })
+	       .catch(err => {
+	           console.error("여전히 에러가 난다면 서버 코드를 확인하세요!", err.response);
+	       });
+		
 	}, false);
 	
 </script>

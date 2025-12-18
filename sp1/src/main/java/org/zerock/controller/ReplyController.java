@@ -24,15 +24,6 @@ public class ReplyController {
 	
 	private final ReplyService replyService;
 	
-	@GetMapping(value = "/",  produces = "application/json")
-	public SampleDTO test() {
-		log.info("-------------test-------------------");
-		return SampleDTO.builder()
-				.name("hong")
-				.age(20)
-				.build();
-	}
-	
 	@ExceptionHandler(ReplyException.class)
 	public ResponseEntity<String> handleReplyError(ReplyException ex){
 		log.error(ex.getMessage());
