@@ -57,4 +57,73 @@
   </div>
 </div>
 
+
+<div class="col-lg-12">
+   <div class="card shadow mb-4">
+   	<div class='m-4'>
+       <!--댓글 작성 폼 -->
+			<form id="replyForm" class="mt-4">
+			  <!-- 게시글 번호 hidden 처리 -->
+			  <input type="hidden" name="bno" value="${board.bno}" />
+			
+			  <div class="mb-3 input-group input-group-lg">
+			    <span class="input-group-text">Replyer</span>
+			    <input type="text" name="replyer" class="form-control" required />
+			  </div>
+			
+			  <div class="mb-3 input-group">
+			    <span class="input-group-text">Reply Text</span>
+			    <textarea name="replyText" class="form-control" rows="3" required></textarea>
+			  </div>
+			
+			  <div class="text-end">
+			    <button type="submit" class="btn btn-primary addReplyBtn">Submit Reply</button>
+			  </div>
+			</form>
+			<!-- 댓글 작성 폼 끝 -->
+		</div>	
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+	
+	const replyForm = document.querySelector("#replyForm");
+	
+	document.querySelector(".addReplyBtn").addEventListener("click", e=>{
+		e.preventDefault();
+		e.stopPropagation();
+		
+		/*
+		  bno,  49998                         
+		  name="replyer"  ,  홍길동      ==> 
+		  name="replyText" , 댓글 등록       
+		  
+		  {
+			  bno: 49998,
+			  replyer: "홍길동",
+			  replyText: "댓글 등록"
+		  }  ==> js 객체만듬
+		*/
+		console.log("-----------addReplyBtn-----------------")
+		const formData = new FormData(replyForm);
+		
+		  /*
+		console.log(formData)  
+		
+		for (let [key, value] of formData) {
+  			console.log(key, value);
+		}*/
+		  
+		axios.post("/replies", formData)
+			.then(res => {
+				console.log("------server response-------------");
+				console.log(res)
+				replyForm.reset();
+			})
+	}, false);
+	
+</script>
+
 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>

@@ -11,9 +11,6 @@ public class ReplyException  extends RuntimeException{
 	private String msg;
 	
 	public ReplyException(int code, String msg) {
-		log.info("-----------ReplyException-------------------");
-		log.info(code);
-		log.info(msg);
 		this.code = code;
 		this.msg = msg;
 	}
