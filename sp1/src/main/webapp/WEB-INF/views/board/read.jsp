@@ -218,7 +218,7 @@ function getReplies(pageNum){
   );
 }
 
-getReplies(3);
+getReplies(1);
 
 const replyList = document.querySelector(".replyList");
 
@@ -245,7 +245,31 @@ function printReplies(data){
   }//end for
 
   replyList.innerHTML = liStr
+
+  let paginStr = "";
+
+  if(prev){
+    paginStr += `<li class="page-item">
+                    <a class="page-link" href="\${start-1}" tabindex="-1">이전</a>
+                  </li>`;
+  };
+
+  for(let i of pageNums){
+    paginStr += `<li class="page-item">
+                    <a class="page-link" href="\${i}">\${i}</a>
+                  </li>`;
+  };
+
+  if(next){
+    paginStr += `<li class="page-item">
+                    <a class="page-link" href="\${end + 1}">다음</a>
+                  </li>`
+  }
+
+  document.querySelector(".pagination").innerHTML = paginStr;
 }
+
+
 
 </script>
 
