@@ -255,7 +255,7 @@ function printReplies(data){
   };
 
   for(let i of pageNums){
-    paginStr += `<li class="page-item">
+    paginStr += `<li class="page-item \${i===page ? 'active' : ''}">
                     <a class="page-link" href="\${i}">\${i}</a>
                   </li>`;
   };
@@ -268,6 +268,21 @@ function printReplies(data){
 
   document.querySelector(".pagination").innerHTML = paginStr;
 }
+
+document.querySelector(".pagination").addEventListener("click", e => {
+  e.preventDefault;
+  e.stopPropagation;
+
+  const target = e.target;
+
+  const href = target.getAttribute("href");
+  if(!href){
+    return ;
+  }
+
+  getReplies(href);
+
+}, false);
 
 
 
