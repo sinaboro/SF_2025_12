@@ -45,8 +45,8 @@ public class ReplyController {
 		return ResponseEntity.ok(Map.of("result", replyDTO.getRno()));
 	}
 	
-	//localhost:8080/replies/49993/list
-	//localhost:8080/replies/49999/list?page=2&size=10
+	//localhost:8080/replies/11665218/list
+	//localhost:8080/replies/11665218/list?page=2&size=10
 	@GetMapping("/{bno}/list")
 	public ResponseEntity<ReplyListPaginDTO> listOfBoard(
 				@PathVariable("bno") Long bno, 
