@@ -59,26 +59,26 @@
 
 
 <div class="col-lg-12">
-   <div class="card shadow mb-4">
-   	<div class='m-4'>
-       <!--댓글 작성 폼 -->
-			<form id="replyForm" class="mt-4">
-			  <!-- 게시글 번호 hidden 처리 -->
-			  <input type="hidden" name="bno" value="${board.bno}" />
-			
-			  <div class="mb-3 input-group input-group-lg">
-			    <span class="input-group-text">Replyer</span>
-			    <input type="text" name="replyer" class="form-control" required />
-			  </div>
-			
-			  <div class="mb-3 input-group">
-			    <span class="input-group-text">Reply Text</span>
-			    <textarea name="replyText" class="form-control" rows="3" required></textarea>
-			  </div>
-			
-			  <div class="text-end">
-			    <button type="submit" class="btn btn-primary addReplyBtn">Submit Reply</button>
-			  </div>
+    <div class="card shadow mb-4">
+    <div class='m-4'>
+        <!--댓글 작성 폼 -->
+      <form id="replyForm" class="mt-4">
+        <!-- 게시글 번호 hidden 처리 -->
+        <input type="hidden" name="bno" value="${board.bno}" />
+      
+        <div class="mb-3 input-group input-group-lg">
+          <span class="input-group-text">Replyer</span>
+          <input type="text" name="replyer" class="form-control" required />
+        </div>
+      
+        <div class="mb-3 input-group">
+          <span class="input-group-text">Reply Text</span>
+          <textarea name="replyText" class="form-control" rows="3" required></textarea>
+        </div>
+      
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary addReplyBtn">Submit Reply</button>
+        </div>
 			</form>
 			<!-- 댓글 작성 폼 끝 -->
 		</div>	
@@ -86,28 +86,50 @@
 </div>
 
 <div class="col-lg-12">
-	<div class="card shadow mb-4">
-	   <div class='m-4'>
-		    <!--댓글 목록 -->
-		    <ul class="list-group replyList">
-				 <li class="list-group-item">
-				   <div class="d-flex justify-content-between">
-				     <div>
-				       <strong>번호</strong> - 댓글 내용
-				     </div>
-				     <div class="text-muted small">
-				       작성일
-				     </div>
-				   </div>
-				   <div class="mt-1 text-secondary small">
-				     작성자
-				   </div>
-				 </li>
-			</ul>
+  <div class="card shadow mb-4">
+      <div class='m-4'>
+        <!--댓글 목록 -->
+      <ul class="list-group replyList">
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <div>
+              <strong>번호</strong> - 댓글 내용
+            </div>
+            <div class="text-muted small">
+              작성일
+            </div>
+          </div>
+          <div class="mt-1 text-secondary small">
+            작성자
+          </div>
+        </li>
+			</ul> <!-- 댓글 목록 -->
+
+      <div aria-label="댓글 페이지 네비게이션" class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">이전</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">다음</a>
+          </li>
+        </ul>
+      </div>
+      <!-- 페이징 끝 -->
+      
 		</div>
 	</div>
 </div>
-<!-- 댓글 목록 -->
+
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -206,11 +228,11 @@ function printReplies(data){
   let liStr = "";
 
   for(replyDTO of replyDTOList){
-    liStr +=    `<li class="list-group-item" data-rno="\${replyDTO.rno}">
-                  <div class="d-flex justify-content-between" >
+    liStr +=  `<li class="list-group-item">
+                  <div class="d-flex justify-content-between">
                     <div>
                       <strong>\${replyDTO.rno}</strong> - \${replyDTO.replyText}
-                    </div> 
+                    </div>
                     <div class="text-muted small">
                       \${replyDTO.replyDate}
                     </div>
@@ -218,7 +240,7 @@ function printReplies(data){
                   <div class="mt-1 text-secondary small">
                     \${replyDTO.replyer}
                   </div>
-                </li>`;  
+                </li>`
 
   }//end for
 
