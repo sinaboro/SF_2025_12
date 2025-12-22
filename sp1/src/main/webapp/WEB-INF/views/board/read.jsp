@@ -167,6 +167,63 @@ let currentSize = 10;
 
 const bno = ${board.bno}
 
+////localhost:8080/replies/49999/list?page=2&size=10
+function getReplies(pageNum){
+  axios.get(`/replies/${bno}/list`, {
+    params: {
+      page: pageNum || currentPage,
+      size: currentSize
+    }
+  }).then(
+    res => {      
+      const data = res.data;
+      
+      const {totalCount, page, size}  = data;
+
+      if(totalCount> (page*size)){
+        const lastPage = Math.ceil(totalCount/size);
+        getReplies(lastPage);
+      }else{
+        currentPage = page;
+        currentSize = size;
+        printReplies(data)
+      }
+
+    }
+  )
+  .catch(
+    console.log("error")
+  );
+}
+
+getReplies(3);
+
+const replyList = document.querySelector(".replyList");
+
+function printReplies(data){
+  const {replyDTOList, page,size, prev, next, start, end, pageNums}  = data;
+
+  let liStr = "";
+
+  for(replyDTO of replyDTOList){
+    liStr +=    `<li class="list-group-item" data-rno="\${replyDTO.rno}">
+                  <div class="d-flex justify-content-between" >
+                    <div>
+                      <strong>\${replyDTO.rno}</strong> - \${replyDTO.replyText}
+                    </div> 
+                    <div class="text-muted small">
+                      \${replyDTO.replyDate}
+                    </div>
+                  </div>
+                  <div class="mt-1 text-secondary small">
+                    \${replyDTO.replyer}
+                  </div>
+                </li>`;  
+
+  }//end for
+
+  replyList.innerHTML = liStr
+}
 
 </script>
 

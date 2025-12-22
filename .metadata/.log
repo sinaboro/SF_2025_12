@@ -3972,3 +3972,219 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:58.744
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:58.758
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:59.297
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:59.299
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:59.299
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:31:59.300
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.010
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.017
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.019
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.019
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.020
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:17.020
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.642
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.644
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.649
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.650
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.651
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:32:38.651
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.655
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.660
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.662
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.662
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.663
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:38:18.663
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.021
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.026
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.027
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.027
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.028
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:39:41.028
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.502
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.505
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.507
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.507
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.510
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:41:04.510
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.949
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.954
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.955
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.956
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.956
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:43:20.957
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.685
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.697
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.700
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.701
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.701
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:53:33.701
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.597
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.602
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.603
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.604
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.604
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:56:13.604
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.936
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.952
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.955
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.956
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.956
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 12:58:06.956
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.146
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.149
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.150
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.151
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.152
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:11:43.152
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.162
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.166
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.169
+!MESSAGE Direct modification of compileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.170
+!MESSAGE Direct modification of compileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.170
+!MESSAGE Direct modification of testCompileSourceRoots through clear() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-12-22 13:13:45.171
+!MESSAGE Direct modification of testCompileSourceRoots through add() is deprecated and will not work in Maven 4.0.0. Please use the add/remove methods instead. If you're using a plugin that causes this warning, please upgrade to the latest version and report an issue if the warning persists. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
