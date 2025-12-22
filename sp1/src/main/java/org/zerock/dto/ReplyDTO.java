@@ -2,6 +2,8 @@ package org.zerock.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,8 +29,13 @@ public class ReplyDTO {
 	private int rno;
 	private String replyText;
 	private String replyer;
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDateTime replyDate;
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDateTime updateDate;
+	
 	private boolean delflag;
 	
 	private Long bno;

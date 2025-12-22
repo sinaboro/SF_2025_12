@@ -85,6 +85,30 @@
 	</div>
 </div>
 
+<div class="col-lg-12">
+	<div class="card shadow mb-4">
+	   <div class='m-4'>
+		    <!--댓글 목록 -->
+		    <ul class="list-group replyList">
+				 <li class="list-group-item">
+				   <div class="d-flex justify-content-between">
+				     <div>
+				       <strong>번호</strong> - 댓글 내용
+				     </div>
+				     <div class="text-muted small">
+				       작성일
+				     </div>
+				   </div>
+				   <div class="mt-1 text-secondary small">
+				     작성자
+				   </div>
+				 </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 댓글 목록 -->
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script type="text/javascript">
@@ -137,7 +161,13 @@ document.querySelector(".addReplyBtn").addEventListener("click", e=>{
     });
     
 }, false); // 이벤트 캡처링 단계를 사용하지 않겠다는 의미의 기본값입니다.
-	
+
+let currentPage = 1;
+let currentSize = 10;
+
+const bno = ${board.bno}
+
+
 </script>
 
 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>
