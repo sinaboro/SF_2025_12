@@ -187,10 +187,13 @@ document.querySelector(".addReplyBtn").addEventListener("click", e=>{
 let currentPage = 1;
 let currentSize = 10;
 
-const bno = ${board.bno}
+const bno = ${board.bno};
 
-////localhost:8080/replies/49999/list?page=2&size=10
-function getReplies(pageNum){
+////localhost:8080/replies/49999/list?page=1&size=10
+function getReplies(pageNum, goLast){
+  
+  console.log("--------------getReplies-------------- : " + pageNum)
+	
   axios.get(`/replies/${bno}/list`, {
     params: {
       page: pageNum || currentPage,
@@ -199,10 +202,10 @@ function getReplies(pageNum){
   }).then(
     res => {      
       const data = res.data;
-      
+      console.log(data);
       const {totalCount, page, size}  = data;
 
-      if(totalCount> (page*size)){
+      if( goLast && (totalCount > (page*size)) ){
         const lastPage = Math.ceil(totalCount/size);
         getReplies(lastPage);
       }else{
@@ -212,13 +215,10 @@ function getReplies(pageNum){
       }
 
     }
-  )
-  .catch(
-    console.log("error")
-  );
+  );  
 }
 
-getReplies(1);
+getReplies(1 , true);
 
 const replyList = document.querySelector(".replyList");
 
@@ -272,7 +272,7 @@ function printReplies(data){
 document.querySelector(".pagination").addEventListener("click", e => {
   e.preventDefault;
   e.stopPropagation;
-
+  console.log("-------------addEventListener-------------------")
   const target = e.target;
 
   const href = target.getAttribute("href");
@@ -280,6 +280,7 @@ document.querySelector(".pagination").addEventListener("click", e => {
     return ;
   }
 
+  console.log(href);
   getReplies(href);
 
 }, false);
