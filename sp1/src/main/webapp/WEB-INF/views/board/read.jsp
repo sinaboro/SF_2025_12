@@ -192,9 +192,7 @@ const bno = ${board.bno};
 ////localhost:8080/replies/49999/list?page=1&size=10
 function getReplies(pageNum, goLast){
   
-  console.log("--------------getReplies-------------- : " + pageNum)
-	
-  axios.get(`/replies/${bno}/list`, {
+  axios.get(`/replies/\${bno}/list`, {
     params: {
       page: pageNum || currentPage,
       size: currentSize
@@ -217,8 +215,6 @@ function getReplies(pageNum, goLast){
     }
   );  
 }
-
-getReplies(1 , true);
 
 const replyList = document.querySelector(".replyList");
 
@@ -270,9 +266,9 @@ function printReplies(data){
 }
 
 document.querySelector(".pagination").addEventListener("click", e => {
-  e.preventDefault;
-  e.stopPropagation;
-  console.log("-------------addEventListener-------------------")
+  e.preventDefault();
+  e.stopPropagation();
+
   const target = e.target;
 
   const href = target.getAttribute("href");
@@ -285,7 +281,7 @@ document.querySelector(".pagination").addEventListener("click", e => {
 
 }, false);
 
-
+getReplies(1 , true);
 
 </script>
 

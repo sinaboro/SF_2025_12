@@ -53,8 +53,14 @@ public class ReplyController {
 				@RequestParam(name="page", defaultValue = "1") int page,
 				@RequestParam(name="size", defaultValue = "10") int size
 			){
+		
+		log.info("--------bno------------ : " + bno);
+		
+		
 		ReplyListPaginDTO listOfBoard = 
 					replyService.listOfBoard(bno, page, size);
+		
+		log.info(listOfBoard);
 		
 		//java 객체 -> json 변환 -> jackson 라이브러리가 처리
 		return ResponseEntity.ok(listOfBoard);
