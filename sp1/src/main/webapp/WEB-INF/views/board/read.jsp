@@ -167,19 +167,20 @@ document.querySelector(".addReplyBtn").addEventListener("click", e=>{
               // 보내는 데이터의 형식이 JSON임을 서버에 알려줍니다.
               'Content-Type': 'application/json' 
           }
-     })
+    })
     // 서버 전송에 성공했을 때 실행되는 구간입니다.
     .then(res => {
-         console.log("------성공 응답-------------");
-         console.log(res.data); // 서버에서 보내준 결과 데이터를 콘솔에 출력합니다.
-         
+          console.log("------성공 응답-------------");
+          console.log(res.data); // 서버에서 보내준 결과 데이터를 콘솔에 출력합니다.
+          
          // 전송이 성공했으므로 폼에 입력되어 있던 내용을 모두 비웁니다.
-         replyForm.reset();
-     })
+          replyForm.reset();
+          getReplies(1, true);
+    })
     // 서버 전송 중 에러가 발생했을 때 실행되는 구간입니다.
     .catch(err => {
          // 에러 메시지와 함께 서버의 응답 내용을 콘솔에 출력합니다.
-         console.error("여전히 에러가 난다면 서버 코드를 확인하세요!", err.response);
+        console.error("여전히 에러가 난다면 서버 코드를 확인하세요!", err.response);
     });
     
 }, false); // 이벤트 캡처링 단계를 사용하지 않겠다는 의미의 기본값입니다.

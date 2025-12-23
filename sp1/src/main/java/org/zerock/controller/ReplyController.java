@@ -55,6 +55,7 @@ public class ReplyController {
 			){
 		
 		log.info("--------bno------------ : " + bno);
+		log.info("--------page------------ : " + page);
 		
 		
 		ReplyListPaginDTO listOfBoard = 
