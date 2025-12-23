@@ -54,9 +54,6 @@ public class ReplyController {
 				@RequestParam(name="size", defaultValue = "10") int size
 			){
 		
-		log.info("--------bno------------ : " + bno);
-		log.info("--------page------------ : " + page);
-		
 		
 		ReplyListPaginDTO listOfBoard = 
 					replyService.listOfBoard(bno, page, size);
@@ -67,7 +64,23 @@ public class ReplyController {
 		return ResponseEntity.ok(listOfBoard);
 	}
 	
+	@GetMapping("/{rno}")
+	public ResponseEntity<ReplyDTO> read(@PathVariable("rno") int rno){
+		return ResponseEntity.ok(replyService.getOne(rno));
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
