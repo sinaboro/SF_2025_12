@@ -16,7 +16,13 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
 		
-		log.info("---------------filterChain----------------------");
+		log.info("---------------filterChain----------------------");		
+		
+		http
+			.authorizeHttpRequests(auth-> 
+				auth.anyRequest().authenticated()
+			)
+			.formLogin();
 		
 		return http.build();
 	}
