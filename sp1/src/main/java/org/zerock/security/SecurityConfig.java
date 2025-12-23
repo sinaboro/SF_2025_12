@@ -18,11 +18,6 @@ public class SecurityConfig {
 		
 		log.info("---------------filterChain----------------------");		
 		
-		http
-			.authorizeHttpRequests(auth-> 
-				auth.anyRequest().authenticated()
-			)
-			.formLogin();
 		
 		return http.build();
 	}
