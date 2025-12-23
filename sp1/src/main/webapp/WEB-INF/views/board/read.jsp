@@ -319,11 +319,7 @@ const replyModForm = document.querySelector("#replyModForm");
 replyList.addEventListener("click", e => {
   
   //가장 까까운 상위 li 요소를 찾는다
-  const targetLi = e.target.closest("li");
-  
-  console.log("targetLi : ");
-  
-  console.log(targetLi);
+  const targetLi = e.target.closest("li");  
   
   /*
     data-xxx 형태의 속성은 HTML의 사용자 정의 데이타 속성
@@ -353,13 +349,48 @@ replyList.addEventListener("click", e => {
     }
   });
 
+}, false);
 
+//삭제
+document.querySelector(".btnReplyDel").addEventListener("click", e => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  const formData = new FormData(replyModForm);
+
+  const rno = formData.get("rno"); 
+
+  axios.delete(`/replies/\${rno}`).then( res => {
+    const data = res.data;    //{"result": "deleted"}
+
+    alert("삭제 성공했습니다.");
   
+    replyModal.hide();
 
-
+    getReplies(currentPage);
+  });
 
 }, false);
 
+
+//수정
+document.querySelector(".btnReplyMod").addEventListener("click", e=>{
+  e.preventDefault();
+  e.stopPropagation();
+
+  const formData = new FormData(replyModForm);
+
+  const rno = formData.get("rno");
+
+  axios.put(`/replies/\${rno}`, formData ).then(res => {
+    const data = res.data;
+
+    alert("수정이 성공했습니다.");
+    replyModal.hide();
+    getReplies(currentPage);
+  })
+  
+}, false);
 
 </script>
 
