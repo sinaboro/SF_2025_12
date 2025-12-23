@@ -8,7 +8,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="data-rno"/>
 			<item value="configLocation"/>
 			<item value="ResultSet"/>
 			<item value="dataSource"/>
