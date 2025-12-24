@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.zerock.dto.AccountDTO;
+import org.zerock.dto.AccountRole;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -33,13 +35,20 @@ public class CustomUserDetailsService implements UserDetailsService{
 				.build();
 		*/
 		
-		UserDetails user = User.builder()
-				.username(username)
-				.password(encoder.encode("1111"))
-				.roles("USER")
-				.build();
 		
-		return user;
+		
+//		UserDetails user = User.builder()
+//				.username(username)
+//				.password(encoder.encode("1111"))
+//				.roles("USER")
+//				.build();
+		
+		AccountDTO  accountDTO = new AccountDTO();
+		accountDTO.setUid(username);
+		accountDTO.setUpw(encoder.encode("1111"));
+		accountDTO.addRole(AccountRole.USER);
+		accountDTO.addRole(AccountRole.MANAGER);
+		
+		return accountDTO;
 	}
-
 }

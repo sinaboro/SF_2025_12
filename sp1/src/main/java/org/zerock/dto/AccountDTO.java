@@ -19,7 +19,7 @@ public class AccountDTO implements UserDetails{
 	private String uname;
 	private String email;
 	
-	private List<AccountRole> roleNames;
+	private List<AccountRole> roleNames;           // USER, MANAGER, ADMIN
 	
 	public void addRole(AccountRole role) {
 		if(roleNames == null) {
@@ -34,7 +34,7 @@ public class AccountDTO implements UserDetails{
 		if(roleNames == null || roleNames.size() == 0) {
 			return List.of();
 		}
-		
+		// USER, MANAGER, ADMIN
 		return roleNames.stream().map(role -> 
 					new SimpleGrantedAuthority("ROLE_" + role.name()))
 					.collect(Collectors.toList());
