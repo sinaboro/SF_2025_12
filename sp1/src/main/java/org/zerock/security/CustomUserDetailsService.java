@@ -25,7 +25,6 @@ public class CustomUserDetailsService implements UserDetailsService{
 		log.info("-----------------loadUserByUsername----------------------");
 		log.info("username : " + username);
 		
-		log.info("encoder : " + encoder);
 		/*
 		UserDetails user = User.builder()
 				.username(username)
