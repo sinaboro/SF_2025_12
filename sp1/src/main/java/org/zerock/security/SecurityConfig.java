@@ -28,6 +28,10 @@ public class SecurityConfig {
 			config.disable();
 		});
 		
+		http.exceptionHandling(config-> {
+			config.accessDeniedHandler(new Custom403Handler());
+		});
+		
 		return http.build();
 	}
 	

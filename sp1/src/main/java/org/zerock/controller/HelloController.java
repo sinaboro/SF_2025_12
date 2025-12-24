@@ -127,5 +127,9 @@ public class HelloController {
 		log.info("/sample/ex8");
 	}
 	
+	@GetMapping("/access-denied")
+	public String accessDenied(){
+		return "/sample/accessDenied";
+	}
 	
 }
