@@ -4,7 +4,21 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.AccountMapper">
   
+  <insert id="insert">
+  	insert into tbl_account(uid, upw,uname,  email) 
+  	values(#{uid}, #{upw}, #{uname}, #{email})
+  </insert>
   
+  <insert id="insertRoles">
+  	
+  	insert into tbl_account_roles(uid, rolename) 
+  	values
+  	
+  	<foreach collection="roleNames" item="role">
+  		(#{uid}, #{role})
+  	</foreach>
+  	
+  </insert>
   
 </mapper>
 
