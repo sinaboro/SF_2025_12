@@ -21,7 +21,7 @@ public class SecurityConfig {
 		log.info("---------------filterChain----------------------");		
 		
 		http.formLogin(config-> {
-			
+			config.loginPage("/account/login");
 		});
 		
 		http.csrf(config -> {
