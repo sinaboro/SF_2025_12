@@ -52,7 +52,6 @@
 	          <button type="button" class="btn btn-warning btnModify">MODIFY</button>
 	          <button type="button" class="btn btn-danger btnRemove">REMOVE</button>
           </c:if>
-          
         </div>
       </div>
     </div>

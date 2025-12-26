@@ -3,6 +3,7 @@ package org.zerock.controller;
 import java.util.List;
 
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,13 +45,11 @@ public class BoardController {
 			@RequestParam(name="size", defaultValue = "10") int size,
 			@RequestParam(name="types", required = false) String types,
 			@RequestParam(name="keyword", required = false) String keyword,			
-			Model model) {
+			Model model, Authentication authentication) {
 		
 		BoardListPaginDTO list = boardService.getList(page, size,types,keyword);
 		
-		log.info("---------------------------------------");
-		log.info("types : " +  list.getKeyword());
-		log.info("keyword : " + list.getTypes());		
+		log.info("---------------------------------------");		
 		
 		model.addAttribute("dto", list);
 		
@@ -66,9 +65,12 @@ public class BoardController {
 	
 	//등록 처리
 	@PostMapping("/register")
-	public String registerPost(BoardDTO dto, RedirectAttributes rttr) {
+	public String registerPost(Authentication authentication,  BoardDTO dto, RedirectAttributes rttr) {
 		log.info("-------------------------------");
 		log.info("board register post");
+		log.info(authentication);
+		log.info(authentication.getPrincipal());
+		
 		
 		//게시글 등록하면 등록된 번호를 반환
 		Long  bno = boardService.register(dto);
@@ -122,10 +124,13 @@ public class BoardController {
 		return "board/modify";
 	}
 	
-	@PreAuthorize("authentication.name == #dto.writer")
+	@PreAuthorize("principal.uid == #dto.writer")
 	@PostMapping("/modify")
 	public String modifyPost(@ModelAttribute BoardDTO dto) {
-		log.info("board modify post");
+		log.info("board modify post");	
+		
+		
+		
 		
 		boardService.modify(dto);
 		
@@ -135,7 +140,7 @@ public class BoardController {
 	/*
 	 * 삭제
 	 * localhost:8080/board/remove 
-	 */
+	 */	
 	@PostMapping("/remove")
 	public String remove(@RequestParam("bno") Long bno,
 			RedirectAttributes rttr) {
