@@ -54,4 +54,13 @@ class AccountMapperTest {
 		}
 	}
 	
+	@Test
+	public void testSelectOne() {
+		AccountDTO accountDTO = accountMapper.selectOne("user85");
+		
+		log.info(accountDTO);
+		log.info(accountDTO.getRoleNames());
+		
+	}
+	
 }

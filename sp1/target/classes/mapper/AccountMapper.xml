@@ -20,6 +20,32 @@
   	
   </insert>
   
+  <resultMap type="org.zerock.dto.AccountDTO" id="selectMap">
+  	
+  	<id property="uid" column="uid" />
+  	<result property="upw" column="upw"/>
+  	<result property="uname" column="uname"/>
+  	<result property="email" column="email"/>
+  	
+  	<collection property="roleNames" ofType="org.zerock.dto.AccountRole">
+  		<result column="rolename" 
+  			javaType="org.zerock.dto.AccountRole"
+  			typeHandler="org.apache.ibatis.type.EnumTypeHandler" />
+  	</collection>
+  	
+  </resultMap>
+  
+  
+  <select id="selectOne" resultMap="selectMap">
+  	
+  	select a.uid, a.upw, a.uname, a.email, r.rolename
+	from tbl_account a
+	join tbl_account_roles r
+	on a.uid = r.uid
+	where a.uid = #{uid};
+  	
+  </select>
+  
 </mapper>
 
 
