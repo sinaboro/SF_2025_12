@@ -29,7 +29,7 @@ class AccountMapperTest {
 	
 	@Test
 	@Transactional
-//	@Commit
+	@Commit
 	void testInsert() {
 		
 		for(int i=1; i<=100; i++) {
