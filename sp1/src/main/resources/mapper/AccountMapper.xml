@@ -14,8 +14,8 @@
   	insert into tbl_account_roles(uid, rolename) 
   	values
   	
-  	<foreach collection="roleNames" item="role">
-  		(#{uid}, #{role})
+  	<foreach collection="roleNames" item="role" separator=",">
+  		( #{uid}, #{role} )
   	</foreach>
   	
   </insert>
