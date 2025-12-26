@@ -17,9 +17,9 @@ public class AccountController {
 		log.info("---------loginGET-------------");
 	}
 
-	@PostMapping("/login")
-	public void loginPost() {
-		log.info("---------loginPost----------------");
-	}
+	@GetMapping("/logout")
+	public void logoutGET() {
+		log.info("-----------logoutGET-------------");
+	};
 
 }

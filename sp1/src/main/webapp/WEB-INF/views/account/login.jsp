@@ -13,9 +13,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-    body {
-        background-color: #f8f9fa;
-    }
+    body { background-color: #f8f9fa; }
     .login-box {
         max-width: 400px;
         margin-top: 100px;
@@ -49,7 +47,7 @@
                 </div>
             </c:if>
 
-            <!-- Spring Security 또는 일반 로그인 처리 -->
+            <!-- Spring Security 로그인 처리 -->
             <form method="post" action="/account/login">
 
                 <div class="mb-3">
@@ -60,6 +58,14 @@
                 <div class="mb-3">
                     <label class="form-label">비밀번호</label>
                     <input type="password" name="password" class="form-control" required>
+                </div>
+
+                <!-- ✅ remember-me 추가 -->
+                <div class="form-check mb-3">
+                    <label class="form-check-label" for="rememberMe">
+                        로그인 상태 유지
+                    </label>
+                    <input class="form-check-input" type="checkbox" name="remember-me" id="rememberMe">
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">
