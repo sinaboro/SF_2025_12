@@ -2,6 +2,7 @@ package org.zerock.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,9 @@ public class BoardController {
 
 	//생성자 주입(DI) , @RequiredArgsConstructor 의해서
 	private final BoardService boardService;
+	
+	@Autowired
+	private BoardService service;
 	
 	/*
 	//localhost:8080/board/ex1 -> /WEB-INF/ views / board / ex1.jsp

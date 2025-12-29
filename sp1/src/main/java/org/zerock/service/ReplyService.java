@@ -20,6 +20,8 @@ public class ReplyService {
 	
 	public void add(ReplyDTO replyDTO) {
 		
+		log.info("---------add-------------");
+		
 		try {
 			replyMapper.insert(replyDTO);
 		}catch(Exception e) {
